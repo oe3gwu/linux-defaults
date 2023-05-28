@@ -8,7 +8,7 @@
 # Description:       <DESCRIPTION>
 ### END INIT INFO
 
-NAME=<NAME>
+PROGRAM=<NAME>
 SCRIPT="<COMMAND>"
 RUNAS=<USERNAME>
 
@@ -63,7 +63,7 @@ uninstall() {
 }
 
 status() {
-    printf "%-50s" "Checking $NAME..."
+    printf "%-50s" "Checking $PROGRAM…"
     if [ -f $PIDFILE ] && [ -s $PIDFILE ]; then
         PID=$(cat $PIDFILE)
             if [ -z "$(ps axf | grep ${PID} | grep -v grep)" ]; then
