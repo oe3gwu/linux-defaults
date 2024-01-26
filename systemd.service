@@ -1,0 +1,13 @@
+[Service]
+WorkingDirectory=/home/[yourdirectory]
+ExecStart=/bin/[service] [options]
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=[service]
+User=root
+Group=root
+Environment=[ENV]=[Variable]
+
+[Install]
+WantedBy=multi-user.target
